@@ -7,7 +7,7 @@ public class HW1 extends CommonMethods {
 
     public static void main(String[] args) throws InterruptedException {
 
-        HW1.openBrowserGetURL("http://practice.syntaxtechs.net/input-form-demo.php");
+        HW1.openBrowserGetURL("http://practice.syntaxtechs.net/input-form-demo.php", "firefox");
         driver.findElement(By.cssSelector("input[data-bv-field='first_name']")).sendKeys("Oleksii");
         driver.findElement(By.cssSelector("input[data-bv-field='last_name']")).sendKeys("Rashevskyi");
         driver.findElement(By.cssSelector("input[data-bv-field='email']")).sendKeys("alexey.rashevskyi@gmail.com");

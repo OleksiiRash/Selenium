@@ -1,4 +1,4 @@
-package class02.homework;
+package class03.homework;
 
 import Utlis.CommonMethods;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ public class HW2 extends CommonMethods {
 
     public static void main(String[] args) {
 
-        HW2.openBrowserGetURL("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login");
+        HW2.openBrowserGetURL("http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login", "firefox");
         driver.findElement(By.cssSelector("input[name='txtUsername']")).sendKeys("AlexR");
         driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
         // check the error and verifying it
