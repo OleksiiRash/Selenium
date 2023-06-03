@@ -21,9 +21,8 @@ select, tuesday, thursday and friday one by one
         openBrowserGetURL(url, "chrome");
         WebElement dayOfWeek = driver.findElement(By.cssSelector("select[id='select-demo']"));
         Select obj = new Select(dayOfWeek);
-
-        List<String> valuesToSelect = Arrays.asList("Tuesday", "Thursday", "Friday");
-        for (String value : valuesToSelect) {
+        var valuesToSelect = Arrays.asList("Tuesday", "Thursday", "Friday");
+        for (var value : valuesToSelect) {
             obj.selectByValue(value);
         }
 

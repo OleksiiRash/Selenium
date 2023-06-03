@@ -1,0 +1,14 @@
+Task 1:
+
+http://practice.syntaxtechs.net/javascript-alert-box-demo.php
+click on the last alert
+send keys and accept it
+
+Note: don't worry if the text u send doesn't appears up in the textbox
+
+Task 2:
+goto https://chercher.tech/practice/frames
+
+click on check box
+then select bay cat from drop down
+then enter text in text box
