@@ -1,0 +1,13 @@
+HW1:
+
+goto  http://practice.syntaxtechs.net/dynamic-elements-loading.php
+click on start
+print the text  "welcome syntax technologies "on console
+
+HW2:
+goto http://practice.syntaxtechs.net/dynamic-data-loading-demo.php
+click on get new user
+print the firstname of user
+
+HW3:
+develop a function in common methods to select from dropdown(single select)

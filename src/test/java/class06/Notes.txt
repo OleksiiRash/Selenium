@@ -1,0 +1,54 @@
+***************Implicit wait***************
+
+ Implicit wait:
+ it tells the web-driver to wait for a certain amount of time before throwing an exception
+ it will only be written once and will be applied to the whole session of the execution
+ We can say that implicit wait is a global wait
+
+ Implicit wait is usually set to 20 seconds. If your element is found in any time between the remaining
+ time, that time will be ignored and your script will move on to the next line or action
+
+ If the element is not found in a given time, ONLY then you will get an exception
+
+Syntax:
+driver.manage().timeouts().implicitlyWait(Duration.of.Seconds(20));
+
+********************Waits*********************
+
+wait for webElement to be found --> Implicit wait
+implicit wait --> global
+
+scearnio:
+webElement : <button id= "type"> button </button>
+appears in the DOM after 10 seconds
+
+======Explicit Wait------
+Explicit wait are conditonal wait
+it will wait till a certain condition is fulfilled or the timeout runs out
+
+rough syntax:
+wait.until.webElement to be displayed ()
+
+real syntax for Explicit wait:
+
+1. define the wait:   WebDriverWait wait = new WebDriverWait(driver, Duration.of.Seconds(20) );
+2. Conditon      :    wait.until(ExpectedConditions.elmenttobeVisible(By.xpath("")));
+
+When to use each option:
+
+Implicit wait:
+
+It is better to define when we start the code always
+
+It is useful when you want to set a default waiting time for all elements in your test script.
+It saves you from manually adding wait statements for each element. However,
+it may cause unnecessary delays if the elements appear earlier than the set wait time.
+
+Explicit wait:
+
+It is useful when you want to wait for specific conditions on specific elements.
+It gives you more control over synchronization and helps handle dynamic elements or
+situations where you need to wait for a particular state change on the page.
+
+In general, it is recommended to use explicit waits for better control and more precise synchronization handling.
+However, implicit waits can be used as a fallback option if you encounter synchronization issues in your test script.
