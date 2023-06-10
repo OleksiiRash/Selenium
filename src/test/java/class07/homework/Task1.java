@@ -4,6 +4,7 @@ import Utlis.CommonMethods;
 import Utlis.ConfigReader;
 import Utlis.Constants;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Task1 extends CommonMethods {
     public static void main(String[] args) {
@@ -34,11 +35,11 @@ please make sure that ur code is dynamic enough to cater if another row gets del
 
 
         //print the row number of the row that has the id 55822A
-        var tableRows = driver.findElements(By.xpath("//*[@id='resultTable']/tbody/tr"));
+        var tableRows = driver.findElements(By.xpath("//*[@id='resultTable']/tbody/tr/td[2]"));
 
         for (int i = 0; i < tableRows.size(); i++) {
             var textElement = tableRows.get(i).getText();
-            if (textElement.contains("55822A")) {
+            if (textElement.equals("55822A")) {
                 System.out.println("The row number is " + (i + 1));
                 System.out.println(textElement);
             }
