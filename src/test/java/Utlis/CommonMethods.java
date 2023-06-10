@@ -1,6 +1,5 @@
 package Utlis;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
-
 import java.time.Duration;
 
 public class CommonMethods {
@@ -55,9 +53,7 @@ public class CommonMethods {
         element.sendKeys(text);
     }
 
-
-    //develop a function in common methods to select from dropdown(single select)
-
+    //method to select from dropdown(single select)
     public static void dropDownSelect(WebElement element, String byVisibleText) {
         var object = new Select(element);
         object.selectByVisibleText(byVisibleText);
