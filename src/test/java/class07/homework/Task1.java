@@ -35,7 +35,7 @@ please make sure that ur code is dynamic enough to cater if another row gets del
 
 
         //print the row number of the row that has the id 55822A
-        var tableRows = driver.findElements(By.xpath("//*[@id='resultTable']/tbody/tr/td[2]"));
+        var tableRows = driver.findElements(By.xpath("//*[@id='resultTable']/tbody/tr/td[2]")); // more dynamic solution
 
         for (int i = 0; i < tableRows.size(); i++) {
             var textElement = tableRows.get(i).getText();

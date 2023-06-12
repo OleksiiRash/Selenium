@@ -57,7 +57,7 @@ public class CommonMethods {
     public static void dropDownSelect(WebElement element, String byVisibleText) {
         var object = new Select(element);
         object.selectByVisibleText(byVisibleText);
-        System.out.println("DropDown selected Element is: " + byVisibleText);
+        //System.out.println("DropDown selected Element is: " + byVisibleText);
     }
 
 
