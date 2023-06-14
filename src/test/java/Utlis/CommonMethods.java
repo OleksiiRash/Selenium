@@ -1,5 +1,8 @@
 package Utlis;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,6 +10,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.Select;
+
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 public class CommonMethods {
@@ -58,6 +64,18 @@ public class CommonMethods {
         var object = new Select(element);
         object.selectByVisibleText(byVisibleText);
         //System.out.println("DropDown selected Element is: " + byVisibleText);
+    }
+
+    // method for taking the screenshots
+    public static void takeScreenshot(String name) {
+        var ts = (TakesScreenshot) driver;
+        var file = ts.getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(file, new File(Constants.SCREENSHOT_FOLDER_PATH + name));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
