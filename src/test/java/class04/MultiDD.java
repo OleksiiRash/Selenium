@@ -1,11 +1,9 @@
 package class04;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
 
 public class MultiDD extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {

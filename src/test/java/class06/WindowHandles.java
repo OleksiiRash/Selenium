@@ -1,9 +1,7 @@
 package class06;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
-
-import java.util.Set;
 
 public class WindowHandles extends CommonMethods {
 

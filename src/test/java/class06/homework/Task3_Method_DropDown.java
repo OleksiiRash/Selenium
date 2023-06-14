@@ -1,8 +1,7 @@
 package class06.homework;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class Task3_Method_DropDown extends CommonMethods {
 

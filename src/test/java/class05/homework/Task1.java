@@ -1,6 +1,6 @@
 package class05.homework;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 
 public class Task1 extends CommonMethods {

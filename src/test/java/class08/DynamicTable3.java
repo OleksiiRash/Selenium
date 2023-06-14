@@ -1,12 +1,9 @@
 package class08;
 
-import Utlis.CommonMethods;
-import Utlis.ConfigReader;
-import Utlis.Constants;
+import Utils.CommonMethods;
+import Utils.ConfigReader;
+import Utils.Constants;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class DynamicTable3 extends CommonMethods {
     public static void main(String[] args) {

@@ -1,9 +1,7 @@
 package class05;
 
-import Utlis.CommonMethods;
-import org.openqa.selenium.Alert;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class Alerts extends CommonMethods {
 

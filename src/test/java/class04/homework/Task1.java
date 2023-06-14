@@ -1,12 +1,11 @@
 package class04.homework;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.Arrays;
-import java.util.List;
 
 public class Task1 extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {

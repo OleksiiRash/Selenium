@@ -1,12 +1,9 @@
 package class09;
 
-import Utlis.CommonMethods;
-import Utlis.ConfigReader;
-import Utlis.Constants;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
-import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
 
 public class JavaScriptExecutorDemo2 extends CommonMethods {
     public static void main(String[] args) throws InterruptedException {

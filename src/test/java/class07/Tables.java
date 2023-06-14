@@ -1,6 +1,6 @@
 package class07;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 
 public class Tables extends CommonMethods {

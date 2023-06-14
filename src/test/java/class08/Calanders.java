@@ -1,10 +1,8 @@
 package class08;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class Calanders extends CommonMethods {
     public static void main(String[] args) {

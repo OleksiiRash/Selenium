@@ -1,10 +1,9 @@
 package class07.homework;
 
-import Utlis.CommonMethods;
-import Utlis.ConfigReader;
-import Utlis.Constants;
+import Utils.CommonMethods;
+import Utils.ConfigReader;
+import Utils.Constants;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class Task1 extends CommonMethods {
     public static void main(String[] args) {

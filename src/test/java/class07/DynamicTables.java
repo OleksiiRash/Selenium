@@ -1,8 +1,8 @@
 package class07;
 
-import Utlis.CommonMethods;
-import Utlis.ConfigReader;
-import Utlis.Constants;
+import Utils.CommonMethods;
+import Utils.ConfigReader;
+import Utils.Constants;
 import org.openqa.selenium.By;
 
 

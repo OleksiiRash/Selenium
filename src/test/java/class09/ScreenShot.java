@@ -1,10 +1,8 @@
 package class09;
 
-import Utlis.CommonMethods;
-import org.apache.commons.io.FileUtils;
+import Utils.CommonMethods;
 import org.openqa.selenium.*;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ScreenShot extends CommonMethods {

@@ -1,6 +1,6 @@
 package class05.homework;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 

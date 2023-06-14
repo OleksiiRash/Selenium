@@ -1,6 +1,6 @@
 package class03.homework;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 
 public class HW1 extends CommonMethods {

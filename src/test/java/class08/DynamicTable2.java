@@ -1,8 +1,8 @@
 package class08;
 
-import Utlis.CommonMethods;
-import Utlis.ConfigReader;
-import Utlis.Constants;
+import Utils.CommonMethods;
+import Utils.ConfigReader;
+import Utils.Constants;
 import org.openqa.selenium.By;
 
 public class DynamicTable2 extends CommonMethods {

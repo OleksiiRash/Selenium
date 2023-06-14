@@ -1,6 +1,6 @@
 package class09;
 
-import Utlis.CommonMethods;
+import Utils.CommonMethods;
 import org.openqa.selenium.By;
 
 public class FileUpload extends CommonMethods {
