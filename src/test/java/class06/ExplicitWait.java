@@ -4,6 +4,7 @@ import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 
 import java.time.Duration;
@@ -36,6 +37,8 @@ public class ExplicitWait extends CommonMethods {
             System.out.println("not visible button");
         }
 
+        Assert.assertTrue(enableBtn10SecVisible.isDisplayed(), "Button is not visible");
+
         // Task 2
         var openAlertBtn = driver.findElement(By.xpath("//button[@id='alert']"));
         openAlertBtn.click();
@@ -44,7 +47,7 @@ public class ExplicitWait extends CommonMethods {
 
         var confirmAlert = driver.switchTo().alert();
 
-        if (confirmAlert.getText().equalsIgnoreCase("I got opened after 5 secods")) {
+        if (confirmAlert.getText().equalsIgnoreCase("I got opened after 5 seconds")) {
             System.out.println("alert appeared - all is good");
         } else {
             System.out.println("alert not appeared");
@@ -52,6 +55,7 @@ public class ExplicitWait extends CommonMethods {
 
         confirmAlert.accept();
 
+        Assert.assertEquals(confirmAlert, "I got opened after 5 seconds", "Alert text is not as expected");
 
     }
 }

@@ -13,7 +13,6 @@ public class CheckBoxDemo extends CommonMethods {
         String url = "http://practice.syntaxtechs.net/basic-checkbox-demo.php";
         openBrowserGetURL(url, "chrome");
         WebElement isAgeSelected = driver.findElement(By.cssSelector("input[id='isAgeSelected']"));
-        //isAgeSelected.click();
         if (!isAgeSelected.isSelected()) {
             isAgeSelected.click();
             System.out.println("The checkbox was not selected");

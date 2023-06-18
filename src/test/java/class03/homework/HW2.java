@@ -3,6 +3,7 @@ package class03.homework;
 import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class HW2 extends CommonMethods {
 
@@ -13,12 +14,12 @@ public class HW2 extends CommonMethods {
         driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
         // check the error and verifying it
         WebElement error = driver.findElement(By.cssSelector("span[id='spanMessage']"));
-        System.out.println(error.getText());
-        if (error.getText().contains("Password cannot be empty")) {
-            System.out.println("correct error is displayed");
-        } else {
-            System.out.println("not correct error");
-        }
+        var actualErrorMsg = error.getText();
+        var expectedErrorMsg = "Password cannot be empty";
+        System.out.println("Actual Error is " + actualErrorMsg);
+
+        Assert.assertEquals(actualErrorMsg, expectedErrorMsg, "not correct error");
+        System.out.println("correct error is displayed");
 
         HW2.closeBrowser();
 

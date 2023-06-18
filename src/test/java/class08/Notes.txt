@@ -14,9 +14,14 @@ How to handle Calendars:
 
 Advanced Xpath
 
+//tagname[@attribute='value']/relation::tagname of the desired element
+
+https://prnt.sc/S_BPY7wjjl_M
+
 /following-sibling:: - следующий
 /preceding-sibling:: - предыдуший
 /parent:: - родительский
+/child::
 /ancestor:: - предок
 
 is based on parent and child, sibling relationships

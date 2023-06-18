@@ -4,6 +4,7 @@ import Utils.CommonMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -23,15 +24,14 @@ print the text "welcome syntax technologies "on console
         var wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//h4[text()='Welcome Syntax Technologies']")));
         var text = driver.findElement(By.xpath("//h4[text()='Welcome Syntax Technologies']"));
+        var actualText = text.getText();
+        var expectedText = "Welcome Syntax Technologies";
 
-        if (text.isDisplayed()) {
-            System.out.println("element presented");
-        } else {
-            System.out.println("element not found");
-        }
+        Assert.assertEquals(actualText, expectedText, "element not found");
+        System.out.println("element presented");
 
-        System.out.println(text.getText());
 
+        closeBrowser();
 
     }
 }

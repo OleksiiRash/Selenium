@@ -19,6 +19,5 @@ public class ScreenShot extends CommonMethods {
         takeScreenshot("testSyntax.png");
 
 
-
     }
 }

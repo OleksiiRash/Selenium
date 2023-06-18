@@ -23,8 +23,6 @@ js.executeScript("arguments[0].style.border='3px solid blue'", userNameTxtBox);
 JavascriptExecutor js = (JavascriptExecutor) driver;
 js.executeScript("window.scrollBy(0, 500)");
 ----------------------------------------------
-
-
 Why do we need screenshots in testing?
 
 in testing, it is very important to take screenshots in order to prove the test case

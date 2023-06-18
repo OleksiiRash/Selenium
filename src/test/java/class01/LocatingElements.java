@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 
 public class LocatingElements {
     public static void main(String[] args) {
@@ -20,17 +21,16 @@ public class LocatingElements {
         // send some text to the password field
         driver.findElement(By.name("pass")).sendKeys("password123");
 
-        String url = driver.getCurrentUrl();
+        var url = driver.getCurrentUrl();
         System.out.println("The URl of the page is " + url);
 
-        String title = driver.getTitle();
-        System.out.println("The Title of the page is " + title);
+        var actualTitle = driver.getTitle();
+        var expectedTitle = "Facebook - log in or sign up";
 
-        if (title.equals("Facebook - log in or sign up")) {
-            System.out.println("correct title");
-        } else {
-            System.out.println("not correct title");
-        }
+        System.out.println("The Title of the page is " + actualTitle);
+
+        Assert.assertEquals(actualTitle, expectedTitle, "not correct title");
+        System.out.println("correct title");
 
         driver.quit();
 

@@ -2,6 +2,7 @@ package class07;
 
 import Utils.CommonMethods;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 public class Tables extends CommonMethods {
 
@@ -17,11 +18,8 @@ public class Tables extends CommonMethods {
 
         System.out.println("-----------Checking if Google exist in the whole Table------------");
 
-        if (table.getText().contains("Google")) {
-            System.out.println("True");
-        } else {
-            System.out.println("False");
-        }
+        Assert.assertTrue(table.getText().contains("Google"), "False");
+        System.out.println("True");
 
         System.out.println("---------------------------");
 

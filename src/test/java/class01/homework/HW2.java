@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 
 public class HW2 {
 
@@ -23,17 +24,14 @@ get the title of the webPage and confirm that it is  "Web Orders Login"
         driver.manage().window().maximize();
         driver.findElement(By.name("ctl00$MainContent$username")).sendKeys("Tester");
         driver.findElement(By.name("ctl00$MainContent$password")).sendKeys("test");
-        String title = driver.getTitle();
-        System.out.println(title);
+        String actualTitle = driver.getTitle();
+        var expectedTitle = "Web Orders Login";
+        System.out.println(actualTitle);
 
-        if (title.equals("Web Orders Login")) {
-            System.out.println("The Title of the Page is as expected");
-        } else {
-            System.out.println("title doesn`t match");
-        }
+        Assert.assertEquals(actualTitle, expectedTitle, "title doesn`t match");
+        System.out.println("The Title of the Page is as expected");
 
         driver.quit();
-
 
     }
 }
