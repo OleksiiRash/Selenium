@@ -72,7 +72,7 @@ public class CommonMethods {
         var file = ts.getScreenshotAs(OutputType.FILE);
 
         try {
-            FileUtils.copyFile(file, new File(Constants.SCREENSHOT_FOLDER_PATH + name));
+            FileUtils.copyFile(file, new File(Constants.SCREENSHOT_FOLDER_PATH + name + ".png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
