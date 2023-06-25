@@ -48,6 +48,11 @@ public class CommonMethods {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
+
+    public static void implicitWait(int sec){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
+    }
+
     public static void closeBrowser() {
         if (driver != null) {
             driver.quit();
