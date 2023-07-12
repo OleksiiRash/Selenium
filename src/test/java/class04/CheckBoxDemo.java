@@ -13,12 +13,14 @@ public class CheckBoxDemo extends CommonMethods {
 
         String url = "http://practice.syntaxtechs.net/basic-checkbox-demo.php";
         openBrowserGetURL(url, "chrome");
-        //WebElement isAgeSelected = driver.findElement(By.cssSelector("input[id='isAgeSelected']"));
-        //checkBox(isAgeSelected);
+        WebElement isAgeSelected = driver.findElement(By.cssSelector("input[id='isAgeSelected']"));
+        singleCheckBox(isAgeSelected, false);
 
+        /*
         List<WebElement> cb1Group = driver.findElements(By.xpath("//input[@class='cb1-element']"));
         List<String> checkBoxValues = Arrays.asList("Option-2", "Option-4");
         checkBoxMultiple(cb1Group, checkBoxValues, false);
+         */
 
 
     }

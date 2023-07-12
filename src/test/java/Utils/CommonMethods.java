@@ -82,28 +82,24 @@ public class CommonMethods {
     }
 
 
-    public static void singleCheckBox(WebElement name) {
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
-        if (!name.isSelected()) {
-            name.click();
+    //single checkbox method & implicitWait
+    public static void singleCheckBox(WebElement name, boolean enableImplicitWait) {
+        if (enableImplicitWait) {
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
-    }
 
-    //single checkbox selection and implicit wait in one method
-    public static void singleCheckBoxWait(WebElement name, int sec) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
         if (!name.isSelected()) {
             name.click();
         }
     }
 
     //multiply checkbox selection
-    public static void checkBoxMultiple(List<WebElement> variable, List<String> valuesToSelect, boolean selectAllOrNot) {
+    public static void checkBoxMultiple(List<WebElement> variable, List<String> attributeValuesToSelect, boolean selectAllOrNot) {
         for (var select : variable) {
             var codeValue = select.getAttribute("value");
             if (select.isSelected()) {
                 select.clear();
-            } else if (selectAllOrNot || valuesToSelect.contains(codeValue)) {
+            } else if (selectAllOrNot || attributeValuesToSelect.contains(codeValue)) {
                 select.click();
                 //break;
             }
