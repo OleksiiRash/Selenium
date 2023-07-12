@@ -29,14 +29,6 @@ public class ExplicitWait extends CommonMethods {
         waitAlert.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Button']")));
 
         var enableBtn10SecVisible = driver.findElement(By.xpath("//button[text()='Button']"));
-
-        if (enableBtn10SecVisible.isEnabled()) {
-            enableBtn10SecVisible.click();
-            System.out.println("button is enables and clickable");
-        } else {
-            System.out.println("not visible button");
-        }
-
         Assert.assertTrue(enableBtn10SecVisible.isDisplayed(), "Button is not visible");
 
         // Task 2

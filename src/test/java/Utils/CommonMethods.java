@@ -1,10 +1,7 @@
 package Utils;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.List;
 
 public class CommonMethods {
 
@@ -49,7 +47,7 @@ public class CommonMethods {
     }
 
 
-    public static void implicitWait(int sec){
+    public static void implicitWait(int sec) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
     }
 
@@ -80,6 +78,35 @@ public class CommonMethods {
             FileUtils.copyFile(file, new File(Constants.SCREENSHOT_FOLDER_PATH + name + ".png"));
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+
+    public static void singleCheckBox(WebElement name) {
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
+        if (!name.isSelected()) {
+            name.click();
+        }
+    }
+
+    //single checkbox selection and implicit wait in one method
+    public static void singleCheckBoxWait(WebElement name, int sec) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
+        if (!name.isSelected()) {
+            name.click();
+        }
+    }
+
+    //multiply checkbox selection
+    public static void checkBoxMultiple(List<WebElement> variable, List<String> valuesToSelect, boolean selectAllOrNot) {
+        for (var select : variable) {
+            var codeValue = select.getAttribute("value");
+            if (select.isSelected()) {
+                select.clear();
+            } else if (selectAllOrNot || valuesToSelect.contains(codeValue)) {
+                select.click();
+                //break;
+            }
         }
     }
 

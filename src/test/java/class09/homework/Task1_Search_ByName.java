@@ -22,7 +22,7 @@ public class Task1_Search_ByName extends CommonMethods {
         submit.click();
 
         driver.findElement(By.xpath("//a[@id='menu_pim_viewPimModule']")).click();
-        Actions action = new Actions(driver);
+        var action = new Actions(driver);
         var searchByName = driver.findElement(By.id("empsearch_employee_name_empName"));
         action.moveToElement(searchByName).perform();
         Thread.sleep(2000);
@@ -31,7 +31,7 @@ public class Task1_Search_ByName extends CommonMethods {
         action.click(searchByName).perform();
         Thread.sleep(2000);
         searchByName.clear();
-        searchByName.sendKeys("Asli S");
+        sendText("Asli S", searchByName);
         var selectNameDropDown = driver.findElement(By.xpath("//div[@class='ac_results']"));
         implicitWait(20);
         action.click(selectNameDropDown).perform();
