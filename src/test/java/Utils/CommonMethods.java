@@ -47,8 +47,13 @@ public class CommonMethods {
     }
 
 
+    //method for the implicitWait set-up
     public static void implicitWait(int sec) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
+    }
+
+    public static void explicitWait(){
+
     }
 
     public static void closeBrowser() {
