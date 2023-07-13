@@ -52,10 +52,6 @@ public class CommonMethods {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
     }
 
-    public static void explicitWait(){
-
-    }
-
     public static void closeBrowser() {
         if (driver != null) {
             driver.quit();
@@ -124,11 +120,9 @@ public class CommonMethods {
                 option.click();
                 //break;
             }
-
         }
-
-
     }
+
 
 
 }
